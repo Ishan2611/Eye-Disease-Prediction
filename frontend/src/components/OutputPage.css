@@ -1,0 +1,246 @@
+/* Background */
+.output-background {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0f172a 0%, #020617 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: #e2e8f0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Glass Card */
+.output-glass-card {
+  background: rgba(17, 24, 39, 0.85);
+  border-radius: 20px;
+  padding: 50px 40px;
+  width: 95%;
+  max-width: 1300px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 40px rgba(96, 165, 250, 0.15);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  animation: fadeIn 0.8s ease;
+}
+
+/* Header */
+.output-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.output-header h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+
+  -webkit-text-fill-color: transparent;
+}
+
+.output-header p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+/* Content Grid */
+.result-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Image Frames */
+.image-frame,
+.gradcam-frame {
+  background: rgba(30, 41, 59, 0.8);
+  border: 2px solid #334155;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.image-frame:hover,
+.gradcam-frame:hover {
+  border-color: #60a5fa;
+  box-shadow: 0 0 25px rgba(96, 165, 250, 0.3);
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.gradcam-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+  border: 1px solid #475569;
+}
+
+/* Right Section */
+.result-right {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.diagnosis-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 5px;
+}
+
+.diagnosis-result {
+  font-size: 1.4rem;
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+/* Confidence Bar */
+.confidence-box {
+  background: rgba(51, 65, 85, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.confidence-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.confidence-bar {
+  height: 10px;
+  background: rgba(51, 65, 85, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.confidence-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  transition: width 1s ease;
+}
+
+/* Detected Features */
+.features-box {
+  background: rgba(51, 65, 85, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.features-box h4 {
+  margin-bottom: 10px;
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.features-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features-box li {
+  padding: 6px 0;
+  color: #cbd5e1;
+}
+
+.features-box li span {
+  color: #10b981;
+  margin-right: 8px;
+}
+
+/* Recommendation Box */
+.recommendation-box {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.recommendation-box h4 {
+  margin-bottom: 8px;
+  color: #34d399;
+  font-weight: 600;
+}
+
+.recommendation-box p {
+  color: #cbd5e1;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Analyze Again Button */
+.footer-center {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.analyze-again-btn {
+  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.analyze-again-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(167, 139, 250, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .result-content {
+    grid-template-columns: 1fr;
+  }
+
+  .image-frame,
+  .gradcam-frame {
+    padding: 15px;
+  }
+}
+
+/* Add this to your existing OutputPage.css */
+
+/* Chat Prompt Box */
+.chat-prompt-box {
+  margin-top: 20px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  animation: pulse 2s ease-in-out infinite;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chat-prompt-box:hover {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15));
+}
